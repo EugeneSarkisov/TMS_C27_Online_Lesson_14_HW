@@ -53,7 +53,9 @@ public class DocReader {
             FileWriter errorLogFileWriter = new FileWriter(PATH_TO_ERROR_LOGS, true);
             userLogsFileWriter.write("Unexpected error. Please, check the error logs." + "\n");
             errorLogFileWriter.write(e.getMessage());
+            userLogsFileWriter.close();
             errorLogFileWriter.close();
+            
         }
     }
 }
